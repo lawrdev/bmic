@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-chakra-ui-type-script",
+  "name": "bmi-calculator",
   "version": "1.0.0",
   "private": true,
-  "description": "gatsby-starter-chakra-ui-type-script",
-  "author": "tylerapfledderer",
+  "description": "bmi calculator",
+  "author": "lawrdev",
   "keywords": [
     "gatsby"
   ],
