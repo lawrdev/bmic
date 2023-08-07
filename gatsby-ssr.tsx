@@ -1,11 +1,11 @@
-import * as React from "react";
-import type { GatsbySSR } from "gatsby";
-import Layout from "./src/components/layout";
+// import * as React from "react";
+// import type { GatsbySSR } from "gatsby";
+// import Layout from "./src/components/layout";
 
-export const wrapPageElement: GatsbySSR["wrapPageElement"] = ({ element }) => {
-  return (
-    <div>
-      <Layout>{element}</Layout>
-    </div>
-  );
-};
+// export const wrapPageElement: GatsbySSR["wrapPageElement"] = ({ element }) => {
+//   return (
+//     <div>
+//       <Layout>{element}</Layout>
+//     </div>
+//   );
+// };
