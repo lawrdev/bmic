@@ -4,6 +4,7 @@ import {
   extendTheme,
   withDefaultColorScheme,
 } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const Button: ComponentStyleConfig = {
   baseStyle: {
@@ -18,12 +19,30 @@ const Button: ComponentStyleConfig = {
 };
 
 const theme = {
+  styles: {
+    global: (props: any) => ({
+      // body: {
+      //   backgroundColor: mode(
+      //     props.colorMode === "dark" ? "blue" : "#EDF2F7",
+      //     "red"
+      //   )(props),
+      //   color: mode("#111", "#EDF2F7")(props),
+      // },
+    }),
+  },
   fonts: {
     heading: `'Montserrat', sans-serif`,
     body: `'Open Sans', sans-serif`,
   },
   colors: {
     primary: "#EF494B",
+    sec: "#2D2D2D",
+    sec100: "#2D3748",
+    sec200: "#59616F",
+    sec300: "#1A202C",
+    white300: "#A0AEC0",
+    white200: "#EDF2F7",
+    white100: "#F7FAFC",
 
     main: {
       50: "#ffe5e5",
