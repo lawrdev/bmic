@@ -10,7 +10,7 @@ export default function Container({
 }) {
   return (
     <Box
-      px={{ base: 6, md: "50px" }}
+      px={{ base: "24px", lg: "50px" }}
       maxWidth={"1380px"}
       width={"100%"}
       mx={"auto"}
