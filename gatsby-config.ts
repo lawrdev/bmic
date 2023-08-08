@@ -42,6 +42,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/projects/`,
       },
     },
+    `gatsby-transformer-remark`,
   ],
 };
 
