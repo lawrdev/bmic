@@ -42,7 +42,17 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/projects/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `rof31u6rpszr`,
+        accessToken: `aqqdKXSJupm3JiLJbV_JAe5kANygfU6Q9ceD-vw7jr4`,
+      },
+    },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 
