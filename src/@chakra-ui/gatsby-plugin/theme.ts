@@ -1,6 +1,7 @@
 // src/@chakra-ui/gatsby-plugin/theme.js
 import {
   ComponentStyleConfig,
+  ThemeConfig,
   extendTheme,
   withDefaultColorScheme,
 } from "@chakra-ui/react";
@@ -17,19 +18,23 @@ const Button: ComponentStyleConfig = {
   },
   defaultProps: {},
 };
+const config: ThemeConfig = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 
 const theme = {
-  styles: {
-    global: (props: any) => ({
-      // body: {
-      //   backgroundColor: mode(
-      //     props.colorMode === "dark" ? "blue" : "#EDF2F7",
-      //     "red"
-      //   )(props),
-      //   color: mode("#111", "#EDF2F7")(props),
-      // },
-    }),
-  },
+  // styles: {
+  //   global: (props: any) => ({
+  //     // body: {
+  //     //   backgroundColor: mode(
+  //     //     props.colorMode === "dark" ? "black" : "white",
+  //     //     "black"
+  //     //   )(props),
+  //     // color: mode("#111", "#EDF2F7")(props),
+  //     // },
+  //   }),
+  // },
   fonts: {
     heading: `'Montserrat', sans-serif`,
     body: `'Open Sans', sans-serif`,
@@ -43,6 +48,7 @@ const theme = {
     white300: "#A0AEC0",
     white200: "#EDF2F7",
     white100: "#F7FAFC",
+    gray100: "#F5F5F5",
 
     main: {
       50: "#ffe5e5",
@@ -61,6 +67,7 @@ const theme = {
   components: {
     Button,
   },
+  config,
 };
 
 export default extendTheme(
