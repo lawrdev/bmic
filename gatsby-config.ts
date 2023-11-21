@@ -1,5 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
@@ -46,7 +50,7 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `rof31u6rpszr`,
-        accessToken: `aqqdKXSJupm3JiLJbV_JAe5kANygfU6Q9ceD-vw7jr4`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     `gatsby-transformer-remark`,
