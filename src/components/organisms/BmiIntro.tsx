@@ -1,17 +1,21 @@
 import { Box, Heading, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import Container from "../atoms/Container";
-import { AboutBmiDataType } from "../../utils/types";
+import { BmiAboutDataProps } from "../../pages";
+import { useColor } from "../../hooks/useColor";
 
-export function BmiIntro({ data }: { data: AboutBmiDataType[] }) {
-  const bg = useColorModeValue("white", "sec100");
-  const bgGray = useColorModeValue("gray100", "sec300");
-  const color100 = useColorModeValue("blackAlpha900", "white300");
-  const color200 = useColorModeValue("blackAlpha900", "white100");
+export function BmiIntro({
+  data,
+}: {
+  data: BmiAboutDataProps["allContentfulBmiData"]["edges"];
+}) {
+  const { bg, bgGray, color100, color200 } = useColor();
+
+  // console.log("this dataaa", data);
 
   return (
     <section>
-      <Box pt={"113px"} pb={"40px"} bg={bgGray}>
+      <Box py={"72px"} bg={bgGray}>
         <Container>
           <Text
             mb={"10px"}
@@ -34,18 +38,15 @@ export function BmiIntro({ data }: { data: AboutBmiDataType[] }) {
             BODY MASS INDEX
           </Heading>
         </Container>
-      </Box>
 
-      <Box bg={bg} py={4}>
         <Container>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
-            mollitia neque illum? Quaerat quas eveniet eaque earum? Numquam
-            vitae architecto odit repellendus accusamus. Voluptas deserunt
-            itaque quaerat aut. Quas, eveniet! Sit debitis nobis possimus
-            recusandae rem. In labore officia iste id placeat nesciunt, vero
-            quod voluptatem reprehenderit itaque neque dignissimos nostrum quas
-            quae laborum dolor mollitia fugit fuga. Minus, hic!
+          <Text
+            mt={"32px"}
+            fontSize={"sm"}
+            lineHeight={"tall"}
+            color={color100}
+          >
+            {data[0]?.node?.desc?.desc || "N/a"}
           </Text>
         </Container>
       </Box>
