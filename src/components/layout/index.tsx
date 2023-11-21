@@ -10,29 +10,47 @@ import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
 import "@fontsource/open-sans/800.css";
-import React from "react";
 
-import { ReactNode, FC } from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import React, { ReactNode, FC, useEffect, useState } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+
+import { Box, Flex, useColorMode } from "@chakra-ui/react";
 import Footer from "../organisms/Footer";
 import { Header } from "../organisms/Header";
 
-const Layout: FC<{ children: ReactNode }> = ({ children }) => {
-  return (
-    <Flex
-      direction={"column"}
-      minHeight={"100vh"}
-      w={"full"}
-      alignItems={"flex-start"}
-      gap={"0px"}
-    >
-      <Header />
-      {children}
+const Layout: FC<{ children: ReactNode; location: any }> = ({
+  children,
+  location,
+}) => {
+  const data = useStaticQuery(graphql`
+    query siteDets {
+      sitePage {
+        path
+      }
+    }
+  `);
 
-      <Box mt={"auto"}>
-        <Footer />
-      </Box>
-    </Flex>
+  // console.log("drrrrrr", data);
+  const isHome = location.pathname! === "/";
+  const { colorMode } = useColorMode();
+
+  return (
+    <Box bg={colorMode === "dark" ? "#1A202C" : "#fff"}>
+      <Flex
+        direction={"column"}
+        minHeight={"100vh"}
+        w={"full"}
+        alignItems={"flex-start"}
+        gap={"0px"}
+      >
+        <Header isHome={isHome} />
+        <main>{children}</main>
+
+        <Box mt={"auto"} w={"full"}>
+          <Footer />
+        </Box>
+      </Flex>
+    </Box>
   );
 };
 
