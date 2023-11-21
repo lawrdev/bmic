@@ -3,9 +3,9 @@
 body {
   max-width: 100vw !important;
   overflow-x: hidden !important;
-  backgroundcolor: #485461 !important;
+  /* backgroundcolor: #485461 !important;
   backgroundimage: linear-gradient(315deg, #485461 0%, #28313b 74%);
-  backgroundrepeat: no-repeat;
+  backgroundrepeat: no-repeat; */
 }
 .swiper {
   width: 100%;
@@ -89,6 +89,6 @@ body {
 .bars {
   width: 13px;
   height: 2.5px;
-  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(255, 255, 255); */
   border-radius: 2px;
 }
