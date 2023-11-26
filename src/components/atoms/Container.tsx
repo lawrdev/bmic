@@ -9,13 +9,7 @@ export default function Container({
   boxProps?: BoxProps;
 }) {
   return (
-    <Box
-      px={{ base: "24px", lg: "50px" }}
-      maxWidth={"1380px"}
-      width={"100%"}
-      mx={"auto"}
-      {...boxProps}
-    >
+    <Box className={"container"} {...boxProps}>
       {children}
     </Box>
   );

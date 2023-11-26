@@ -18,6 +18,7 @@ export function BmiIntro({
       <Box py={"72px"} bg={bgGray}>
         <Container>
           <Text
+            textAlign={"center"}
             mb={"10px"}
             textTransform={"uppercase"}
             fontWeight={500}
@@ -30,6 +31,7 @@ export function BmiIntro({
           </Text>
           <Heading
             as={"h1"}
+            textAlign={"center"}
             color={color200}
             fontFamily={"heading"}
             fontSize={{ base: "2xl", md: "3xl", xl: "4xl" }}
@@ -41,6 +43,7 @@ export function BmiIntro({
 
         <Container>
           <Text
+            textAlign={"center"}
             mt={"32px"}
             fontSize={"sm"}
             lineHeight={"tall"}

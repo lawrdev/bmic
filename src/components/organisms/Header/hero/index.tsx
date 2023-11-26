@@ -11,9 +11,6 @@ import {
 } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/pagination";
-
 import { Autoplay, Navigation, EffectCreative } from "swiper/modules";
 import { useTrail, useSpring, animated, config } from "@react-spring/web";
 
@@ -21,15 +18,25 @@ import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 
 const heroData = [
   {
-    img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1690313852/bmi/h1-img-slider-1_lctjyz.jpg",
-    h1: "THE HEALTHY LIFE",
-    h2: "PERFECT SHAPE",
+    img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1691114713/bmi/h2-img-slider-1_vjo3sn.jpg",
+    h1: "THE RUNNER'S LIFE",
+    h2: "FAST FIT FEARLESS",
   },
   {
-    img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1690313852/bmi/h1-img-slider-3_c2nlkv.jpg",
+    img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1690313852/bmi/h1-img-slider-1_lctjyz.jpg",
     h1: "THE HEALTHY LIFE",
     h2: "POWERFUL BUILD",
   },
+  {
+    img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1691114712/bmi/h-img-slider-full-2_dv3tde.jpg",
+    h1: "THE RUNNER'S LIFE",
+    h2: "STRONG DEVOTED",
+  },
+  // {
+  //   img: "https://res.cloudinary.com/dqveipmsp/image/upload/v1690313852/bmi/h1-img-slider-3_c2nlkv.jpg",
+  //   h1: "THE HEALTHY LIFE",
+  //   h2: "PERFECT SHAPE,
+  // },
 ];
 
 export default function HeaderHero() {

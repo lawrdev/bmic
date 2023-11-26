@@ -92,3 +92,56 @@ body {
   /* background-color: rgb(255, 255, 255); */
   border-radius: 2px;
 }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.__swiper_container {
+  width: 320px;
+}
+
+@media screen and (min-width: 390px) {
+  .__swiper_container {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 490px) {
+  .__swiper_container {
+    width: 460px;
+  }
+}
+@media screen and (min-width: 590px) {
+  .__swiper_container {
+    width: 560px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .__swiper_container {
+    width: 610px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .__swiper_container {
+    width: 700px;
+  }
+}

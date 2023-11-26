@@ -1,29 +1,63 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import {
-  Box,
-  Button,
-  HStack,
-  // @ts-ignore
-  useColorMode,
-} from "@chakra-ui/react";
+import { graphql, type HeadFC, type PageProps } from "gatsby";
+import HeaderHero from "../components/organisms/Header/hero";
+import Layout from "../components/layout";
+import { BmiIntro } from "../components/organisms/BmiIntro";
+import CalculateBMI from "../components/organisms/CalculateBMI";
+import WhatItMeans from "../components/organisms/WhatItMeans";
 
-const IndexPage: React.FC<PageProps> = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+export type BmiAboutDataProps = {
+  allContentfulBmiData: {
+    edges: {
+      node: {
+        desc: { desc: string };
+        header: string;
+        subheader: string;
+      };
+    }[];
+  };
+};
+
+const IndexPage: React.FC<PageProps<BmiAboutDataProps>> = ({
+  location,
+  data,
+}) => {
+  // console.log("ddddd", data);
+
+  const aboutBmiData = data.allContentfulBmiData?.edges;
+
   return (
-    <Box as="main">
-      <HStack py={12}>
-        <p>hdjdjdj</p>
-      </HStack>
-      <Button onClick={toggleColorMode} colorScheme="main" alignSelf="center">
-        Toggle Color Mode
-      </Button>
+    <>
+      <Layout location={location}>
+        <HeaderHero />
+        <main>
+          <BmiIntro data={aboutBmiData} />
 
-      <Button>YOOOOO</Button>
-    </Box>
+          <CalculateBMI />
+
+          <WhatItMeans />
+        </main>
+      </Layout>
+    </>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Home | BMICalc</title>;
+
+export const query = graphql`
+  {
+    allContentfulBmiData {
+      edges {
+        node {
+          header
+          subheader
+          desc {
+            desc
+          }
+        }
+      }
+    }
+  }
+`;

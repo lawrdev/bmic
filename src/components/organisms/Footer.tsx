@@ -21,7 +21,14 @@ export default function Footer() {
   const { bg, bgGray, color100, color200 } = useColor();
 
   return (
-    <Box bg={bg} py={4} color={color100} w={"full"}>
+    <Box
+      bg={bg}
+      py={4}
+      color={color100}
+      w={"full"}
+      borderTop={"1px solid transparent"}
+      borderTopColor={"#ddd"}
+    >
       <Container>
         <Stack
           w={"full"}

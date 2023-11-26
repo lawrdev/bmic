@@ -30,7 +30,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
           </>
         ) : null}
         <br />
-        <Button>
+        <Button as={"p"}>
           <ChakraLink as={Link} to="/">
             Go home
           </ChakraLink>

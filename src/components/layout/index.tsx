@@ -1,4 +1,6 @@
 import "./layout.css";
+import "swiper/css";
+import "swiper/css/pagination";
 import "@fontsource/montserrat/300.css";
 import "@fontsource/montserrat/400.css";
 import "@fontsource/montserrat/500.css";
