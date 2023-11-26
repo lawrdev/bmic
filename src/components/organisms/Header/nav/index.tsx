@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  DarkMode,
-  HStack,
-  IconButton,
-  Text,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Box, HStack, IconButton, Text, useColorMode } from "@chakra-ui/react";
 import { BiMoon, BiSun } from "react-icons/bi";
 import Container from "../../../atoms/Container";
 import { Logo } from "../../../atoms/Logo";
@@ -17,8 +10,8 @@ import { TRANSITION_FAST } from "../../../../constants";
 
 const navData = [
   { label: "Home", link: "/" },
-  { label: "Calculate", link: "/calculate" },
-  { label: "About", link: "#about" },
+  { label: "Calculate", link: "#calculateBMI" },
+  { label: "About", link: "/" },
 ];
 
 export function Nav({ isHome }: { isHome: boolean }) {
@@ -59,7 +52,7 @@ export function Nav({ isHome }: { isHome: boolean }) {
             spacing={8}
             order={{ base: 3, md: 2 }}
             display={{ base: "none", lg: "flex" }}
-            alignItems={'flex-end'}
+            alignItems={"flex-end"}
           >
             {navData.map((op, index) => (
               <Box key={index}>
@@ -117,16 +110,18 @@ export function Nav({ isHome }: { isHome: boolean }) {
                 />
               </Box>
               <Box display={{ base: "none", md: "block" }} cursor={"pointer"}>
-                <FiGithub
-                  fontSize={"1.5rem"}
-                  color={
-                    isHome
-                      ? "#fff"
-                      : colorMode === "light"
-                      ? "#EDF2F7"
-                      : "#A0AEC0"
-                  }
-                />
+                <a target="_blank" href={"https://github.com/lawrdev"}>
+                  <FiGithub
+                    fontSize={"1.5rem"}
+                    color={
+                      isHome
+                        ? "#fff"
+                        : colorMode === "light"
+                        ? "#EDF2F7"
+                        : "#A0AEC0"
+                    }
+                  />
+                </a>
               </Box>
 
               <Box>
@@ -159,16 +154,18 @@ export function Nav({ isHome }: { isHome: boolean }) {
             />
 
             <Box cursor={"pointer"}>
-              <FiGithub
-                fontSize={"1.5rem"}
-                color={
-                  isHome
-                    ? "#fff"
-                    : colorMode === "light"
-                    ? "#EDF2F7"
-                    : "#A0AEC0"
-                }
-              />
+              <a target="_blank" href={"https://github.com/lawrdev"}>
+                <FiGithub
+                  fontSize={"1.5rem"}
+                  color={
+                    isHome
+                      ? "#fff"
+                      : colorMode === "light"
+                      ? "#EDF2F7"
+                      : "#A0AEC0"
+                  }
+                />
+              </a>
             </Box>
           </HStack>
         </HStack>

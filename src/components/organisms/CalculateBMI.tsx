@@ -127,7 +127,7 @@ const CalculateBMI = () => {
   };
 
   return (
-    <Box py={"72px"} bg={bg}>
+    <Box id={"calculateBMI"} py={"72px"} bg={bg}>
       <Container>
         <Heading
           as={"h1"}

@@ -44,13 +44,19 @@ export default function Footer() {
           </Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter />
+              <a target="_blank" href={"https://twitter.com/lawrdev"}>
+                <FaTwitter />
+              </a>
             </SocialButton>
             <SocialButton label={"Github"} href={"#"}>
-              <FaGithub />
+              <a target="_blank" href={"https://github.com/lawrdev"}>
+                <FaGithub />
+              </a>
             </SocialButton>
             <SocialButton label={"Gmail"} href={"#"}>
-              <FaGoogle />
+              <a target="_blank" href={"mailto:lawrence.tsx@gmail.com"}>
+                <FaGoogle />
+              </a>
             </SocialButton>
           </Stack>
         </Stack>

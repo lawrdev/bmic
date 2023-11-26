@@ -17,8 +17,8 @@ import { Link } from "gatsby";
 
 const menus = [
   { label: "Home", link: "/" },
-  { label: "Calculate", link: "/calculate" },
-  { label: "About", link: "#about" },
+  { label: "Calculate", link: "#calculateBmi" },
+  { label: "About", link: "/" },
 ];
 export default function MenuButton({
   isHome,
